@@ -15,4 +15,9 @@ public class ContaPoupanca extends Conta {
     public double getValorImposto() {
         return 0.005;
     }
+
+    @Override
+    public String toString() {
+        return "ContaPoupanca, " + super.toString();
+    }
 }

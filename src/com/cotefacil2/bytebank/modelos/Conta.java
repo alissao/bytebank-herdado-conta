@@ -97,4 +97,19 @@ public abstract class Conta implements Tributavel {
     public static void setTotal(int total) {
         Conta.total = total;
     }
+
+    @Override
+    public boolean equals(Object ref) {
+
+        Conta outra = (Conta) ref;
+
+        if (this.agencia != outra.agencia) {return false;}
+        if (this.numero == outra.numero) {return false;}
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Número: " + this.getNumero();
+    }
 }

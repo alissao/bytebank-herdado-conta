@@ -1,6 +1,6 @@
 package com.cotefacil2.bytebank.modelos;
 
-public class Cliente {
+public class Cliente extends Object {
 
     private String nome;
     private String cpf;
