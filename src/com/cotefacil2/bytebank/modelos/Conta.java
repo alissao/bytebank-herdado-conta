@@ -6,7 +6,7 @@ package com.cotefacil2.bytebank.modelos;
  *
  * @author Alisson H.
  */
-public abstract class Conta implements Tributavel {
+public abstract class Conta implements Tributavel, Comparable<Conta> {
 
     protected double saldo;
     private int agencia;
@@ -110,6 +110,12 @@ public abstract class Conta implements Tributavel {
 
     @Override
     public String toString() {
-        return "Número: " + this.getNumero();
+        return "Número: " + this.getNumero()
+                + ", Saldo: " + this.saldo;
+    }
+
+    @Override
+    public int compareTo(Conta outra) {
+        return Double.compare(this.saldo, outra.saldo);
     }
 }
